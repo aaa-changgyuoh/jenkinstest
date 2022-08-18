@@ -45,18 +45,6 @@ pipeline {
                 sh 'curl -sL https://git.io/goreleaser | bash'
             }
         }
-=======
-
-    stage('Build a project') {
-      steps {
-        build 'build a project'
-      }
-    }
-
-  }
-  tools {
-    go '1.19'
->>>>>>> da78f44bdfbb153ff4d08e8ccee87769dff71de4
   }
   
 }
