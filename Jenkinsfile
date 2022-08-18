@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Echo Path') {
+      steps {
+        sh 'echo $PATH'
+      }
+    }
+
   }
 }
