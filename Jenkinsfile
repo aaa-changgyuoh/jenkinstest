@@ -15,5 +15,11 @@ echo $HOME'''
       }
     }
 
+    stage('go') {
+      steps {
+        tool(name: '1.19', type: 'go')
+      }
+    }
+
   }
 }
