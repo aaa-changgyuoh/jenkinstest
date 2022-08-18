@@ -9,7 +9,8 @@ pipeline {
 
     stage('Echo Path') {
       steps {
-        sh 'echo $PATH'
+        sh '''echo $PATH
+echo $HOME'''
       }
     }
 
