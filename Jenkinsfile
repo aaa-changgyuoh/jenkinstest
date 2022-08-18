@@ -1,5 +1,6 @@
 pipeline {
   agent any
+   tools { go '1.19' }
   stages {
     stage('LocalBuild') {
       steps {
@@ -11,12 +12,6 @@ pipeline {
       steps {
         sh '''echo $PATH
 echo $HOME'''
-      }
-    }
-
-    stage('go') {
-      steps {
-        tool(name: '1.19', type: 'go')
       }
     }
 
