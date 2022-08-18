@@ -1,6 +1,6 @@
 pipeline {
-  // Run on an agent where we want to use Go
   agent any
+<<<<<<< HEAD
 
   // Ensure the desired Go version is installed for all stages,
   // using the name defined in the Global Tool Configuration
@@ -9,9 +9,9 @@ pipeline {
         GO111MODULE = 'on'
   }
   stages {
-    stage('Version Check') {
+    stage('Show Go version') {
+
       steps {
-        // Output will be something like "go version go1.19 darwin/arm64"
         sh 'go version'
       }
     }
@@ -46,6 +46,18 @@ pipeline {
                 sh 'curl -sL https://git.io/goreleaser | bash'
             }
         }
+=======
+
+    stage('Build a project') {
+      steps {
+        build 'build a project'
+      }
+    }
+
+  }
+  tools {
+    go '1.19'
+>>>>>>> da78f44bdfbb153ff4d08e8ccee87769dff71de4
   }
   
 }
