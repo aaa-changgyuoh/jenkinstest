@@ -10,7 +10,8 @@ pipeline {
     stage('Echo Path') {
       steps {
         sh '''echo $PATH
-echo $HOME'''
+echo $HOME
+go version'''
       }
     }
 
