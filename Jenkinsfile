@@ -1,6 +1,5 @@
 pipeline {
   agent any
-<<<<<<< HEAD
 
   // Ensure the desired Go version is installed for all stages,
   // using the name defined in the Global Tool Configuration
